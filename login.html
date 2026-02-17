@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustBank • Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- Back Button -->
+  <a href="./index.html" class="back-btn">← Back</a>
+
+  <!-- Background blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="auth-container">
+    <div class="auth-card glass tilt">
+      <h2>Welcome Back</h2>
+      <p>Secure access to your financial future</p>
+
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <p class="switch">
+        New here? <a href="register.html">Create Account</a>
+      </p>
+    </div>
+  </div>
+<script src="js/toast.js"></script>
+  <script src="js/auth.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustBank • Officer Dashboard</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js (for visualizations) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- Background blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🏦 TrustBank • Officer</div>
+
+    <div class="nav-links">
+      <div class="user-profile">
+        <span class="user-icon">👮</span>
+        <span class="username" id="displayUsername">Officer</span>
+      </div>
+      <a href="#" onclick="logout(); return false;" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <div class="officer-container">
+    <div class="dashboard">
+
+      <!-- ===================================
+           SECTION 1: HORIZONTAL STATS ROW
+      =================================== -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-number" id="totalApps">0</span>
+          <span class="stat-label">Total</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-number" id="pendingApps">0</span>
+          <span class="stat-label">Pending</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-number" id="approvedApps">0</span>
+          <span class="stat-label">Approved</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-number" id="rejectedApps">0</span>
+          <span class="stat-label">Rejected</span>
+        </div>
+      </div>
+
+      <!-- ===================================
+           SECTION 2: CHARTS SIDE BY SIDE
+      =================================== -->
+      <div class="charts-container">
+        
+        <!-- Left: Donut Chart -->
+        <div class="chart-card">
+          <h3>Loan Analytics</h3>
+          <div class="chart-wrapper">
+            <canvas id="riskChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Right: Bar Chart -->
+        <div class="chart-card">
+          <h3>Approval Status</h3>
+          <div class="chart-wrapper">
+            <canvas id="statusChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================
+           SECTION 3: LOAN APPLICATIONS LIST
+      =================================== -->
+      <div class="applications-section">
+        
+        <div class="section-header">
+          <h2>Loan Applications</h2>
+          
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterLoans('all')">All</button>
+          </div>
+        </div>
+
+        <!-- Loan cards will be dynamically inserted here -->
+        <div id="loanTable" class="loan-table">
+          <div class="no-data">No loan applications available</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS FILES -->
+  <script src="js/toast.js"></script>
+  <script src="js/officer.js"></script>
+
+</body>
+</html>

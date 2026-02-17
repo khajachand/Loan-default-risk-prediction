@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustBank • User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar glass">
+    <div class="logo">🏦 TrustBank</div>
+    <div class="nav-links">
+      <div class="user-profile">
+        <span class="user-icon">👤</span>
+        <span class="username" id="displayUsername">User</span>
+      </div>
+      <a href="#" onclick="logout(); return false;" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <div class="dashboard">
+
+    <!-- APPLY LOAN -->
+    <div class="glass dashboard-card">
+      <h2>Apply for a Loan</h2>
+
+      <div class="form-grid">
+        <input type="number" id="age" placeholder="Age">
+        <input type="number" id="creditAmount" placeholder="Credit Amount">
+        <input type="number" id="loanDuration" placeholder="Loan Duration (months)">
+        <input type="number" id="installmentRate" placeholder="Installment Rate">
+        <input type="number" id="employmentDuration" placeholder="Employment Duration (years)">
+        <input type="number" id="job" placeholder="Job (0–3)">
+      </div>
+
+      <button onclick="applyLoan()">Submit Application</button>
+    </div>
+
+    <!-- MY APPLICATIONS -->
+    <div class="glass dashboard-card">
+      <h2>My Applications</h2>
+      <div id="applications" class="applications"></div>
+    </div>
+
+  </div>
+
+  <script src="js/toast.js"></script>
+  <script src="js/user.js"></script>
+  
+</body>
+</html>

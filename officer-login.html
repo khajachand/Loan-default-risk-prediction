@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustBank • Officer Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <a href="./index.html" class="back-btn">← Back</a>
+  <!-- Background blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="auth-container">
+    <div class="auth-card glass tilt">
+      
+      <h2>Officer Login</h2>
+      <p>Authorized bank access only</p>
+
+      <input
+        type="text"
+        id="officerUsername"
+        placeholder="Officer Username"
+        autocomplete="off"
+      />
+
+      <input
+        type="password"
+        id="officerPassword"
+        placeholder="Password"
+        autocomplete="off"
+      />
+
+      <button onclick="officerLogin()">Login</button>
+
+      <p class="switch" style="margin-top:15px; opacity:0.8;">
+        Only authorized officer can access this panel
+      </p>
+
+    </div>
+  </div>
+<script src="js/toast.js"></script>
+  <script src="js/officer-auth.js"></script>
+  
+</body>
+</html>
